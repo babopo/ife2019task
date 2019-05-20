@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+    /* margin: 0;
+    padding: 0; */
+    list-style-type: none;
+}
+
+div > ul:first-of-type > li {
+    display: inline-block;
+    margin-right: 30px;
+}
+div ul li span:first-child {
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+ul {
+    padding: 0;
+}
+p span:first-of-type {
+    font-weight: 700;    
+}
+p span {
+    display: block;
+}

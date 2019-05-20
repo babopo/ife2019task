@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-align: center;
+    float: left;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 100%;
+    background-color: rgb(101, 165, 250);
+    line-height: 200px;
+}
+
+main {
+    margin-left: 23%;
+    height: 100%;
+    overflow: hidden;
+}
+
+ul:first-of-type > li {
+    display: inline-block;
+    margin-right: 30px;
+}
+ul li span:first-child {
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+ul {
+    padding: 0;
+}
+p span:first-of-type {
+    font-weight: 700;    
+}
+p span {
+    display: block;
+}
