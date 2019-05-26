@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+header {
+  width: 100%;
+  color: #fff;
+  background-color: #000;
+  height: 100px;
+}
+header div {
+  position: relative;
+  width: 960px;
+  height: 100%;
+  margin: 0 auto;
+}
+header div span {
+  font-size: 25px;
+}
+header div span::after {
+  display: inline-block;
+  content: '';
+  height: 100%;
+  vertical-align: middle;
+}
+header div ul {
+  list-style: none;
+  position: absolute;
+  top: 10px;
+  right: 0;
+}
+header div ul li {
+  display: inline-block;
+}
+header div ul li a:link {
+  color: #fff;
+}
+banner {
+  background-color: #6b3;
+  height: 300px;
+  width: 100%;
+  display: block;
+}
+banner div {
+  width: 960px;
+  margin: 0 auto;
+  height: 100%;
+  position: relative;
+}
+banner div label {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 40px;
+  top: 60%;
+  left: 85%;
+  line-height: 40px;
+  text-align: center;
+  background-color: rgba(224,241,214,0.3);
+  cursor: pointer;
+}
+banner div input:checked + label {
+  padding-top: 20px;
+  height: 60px;
+  background-color: #e0f1d6;
+}
+nav {
+  padding-top: 25px;
+  height: 100px;
+  font-size: 0;
+}
+nav div {
+  width: 960px;
+  margin: 0 auto;
+}
+nav div label {
+  font-size: initial;
+  text-align: center;
+  display: inline-block;
+  border: 1px solid #808080;
+  margin-bottom: -1px;
+  width: 80px;
+  height: 50px;
+  line-height: 50px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: #eee;
+  cursor: pointer;
+}
+nav div input:checked + label {
+  border-bottom-color: #fff;
+  background-color: #fff;
+}
+nav hr {
+  background-color: #808080;
+  border: none;
+  height: 1px;
+}
+main {
+  display: block;
+  height: 600px;
+  width: 100%;
+}
+main div {
+  margin: auto;
+  display: table;
+  width: auto;
+  padding: 0 100px;
+  border-spacing: 10px 5px;
+}
+main div span {
+  display: table-cell;
+  padding: 80px;
+  width: 1%;
+  border: 1px solid #808080;
+  vertical-align: middle;
+  text-align: center;
+  margin: 10;
+}
+footer {
+  background-color: #666;
+  width: 100%;
+  height: 100px;
+  color: #fff;
+  text-align: center;
+}
