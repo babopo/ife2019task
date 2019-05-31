@@ -1,7 +1,9 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300&display=swap");
 html {
   box-sizing: border-box;
 }
 * {
+  font-family: 'Montserrat';
   box-sizing: inherit;
   margin: 0;
   padding: 0;
@@ -61,7 +63,6 @@ header div form label {
   height: 40px;
   background-color: #fff;
   color: #000;
-  vertical-align: top;
   line-height: 40px;
   font-size: 12px;
 }
@@ -108,5 +109,269 @@ header div form label {
 }
 .boat > div div img {
   float: left;
+  width: 38px;
   margin-right: 10px;
+}
+.sup {
+  height: 550px;
+  width: 100%;
+  background-image: url("../pics/bg2.png");
+  background-size: cover;
+  position: relative;
+}
+.sup::before {
+  content: '';
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+}
+.sup > div:first-of-type {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 80px 0;
+  width: 800px;
+  height: 100%;
+  margin: 0 auto;
+}
+.sup > div:first-of-type p {
+  flex: 1;
+  width: 38%;
+  padding: 10px;
+}
+.sup > div:first-of-type p:nth-child(1) {
+  color: #fff;
+  font-size: 32px;
+}
+.sup > div:first-of-type p:nth-child(2) {
+  color: #a5a48f;
+  font-size: 14px;
+}
+.sup > div:first-of-type p:nth-child(3) {
+  width: 100%;
+}
+.sup > div:first-of-type p:nth-child(3) span:nth-child(1) {
+  display: inline-block;
+  text-align: center;
+  width: 180px;
+  height: 40px;
+  background-color: #fff;
+  color: #000;
+  line-height: 40px;
+  font-size: 12px;
+  margin-right: 20px;
+}
+.sup > div:first-of-type p:nth-child(3) span:nth-child(2) {
+  display: inline-block;
+  text-align: center;
+  width: 180px;
+  height: 40px;
+  background-color: rgba(0,0,0,0.08);
+  color: #b9c3bb;
+  line-height: 40px;
+  font-size: 12px;
+  border: 1px solid #646e66;
+}
+.sup .ipad {
+  position: absolute;
+  width: 560px;
+  height: 450px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 1px solid #646e66;
+  border-right-width: 0;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+.sup .ipad img {
+  display: block;
+  position: absolute;
+  width: 500px;
+  height: 400px;
+  top: 25px;
+  right: 0;
+}
+.try {
+  width: 100%;
+  height: 450px;
+  text-align: center;
+  overflow: hidden;
+}
+.try h2 {
+  margin: 50px;
+}
+.try > div {
+  width: 800px;
+  margin: 0 auto;
+  height: calc(450px - 124px);
+  display: flex;
+  justify-content: space-between;
+}
+.try > div div {
+  flex: 1;
+}
+.try > div div p {
+  margin-top: 25px;
+}
+hr {
+  border: none;
+  height: 1px;
+  background-color: #ebebeb;
+}
+.bird {
+  height: 550px;
+  width: 100%;
+}
+.bird > div {
+  width: 800px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 50px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+.bird > div img {
+  height: 210px;
+  width: 450px;
+}
+.bird > div p {
+  width: 300px;
+  text-align: left;
+  font-size: 14px;
+}
+.bird > div p span {
+  font-size: 18px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 25px;
+}
+.crew {
+  height: 550px;
+  width: 100%;
+  text-align: center;
+}
+.crew h2 {
+  margin: 25px;
+}
+.crew > p {
+  width: 600px;
+  margin: 25px auto;
+}
+.crew > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 800px;
+  margin: 0 auto;
+  height: calc(100% - 140px);
+}
+.crew > div > div {
+  width: 42%;
+  height: 43%;
+  position: relative;
+  background-size: 100% 100%;
+}
+.crew > div > div:nth-child(1) {
+  background-image: url("../pics/man1.png");
+  cursor: pointer;
+}
+.crew > div > div:nth-child(1) div {
+  position: absolute;
+  opacity: 0;
+  background-color: rgba(0,0,0,0.8);
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  padding-top: 10px;
+  transition: 0.5s;
+}
+.crew > div > div:nth-child(1) div * {
+  margin: 10px 5px;
+}
+.crew > div > div:nth-child(1):hover div {
+  opacity: 1;
+  transition: 0.5s;
+}
+.crew > div > div:nth-child(2) {
+  background-image: url("../pics/man2.png");
+}
+.crew > div > div:nth-child(3) {
+  background-image: url("../pics/man3.png");
+}
+.crew > div > div:nth-child(4) {
+  background-image: url("../pics/woman.png");
+}
+.contact {
+  height: 600px;
+  width: 100%;
+}
+.contact > div {
+  width: 800px;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+.contact > div form {
+  padding: 25px;
+  text-align: center;
+  display: inline-flex;
+  flex-direction: column;
+  height: 100%;
+  width: 380px;
+  border: 2px solid #f4f4f4;
+}
+.contact > div form input {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+.contact > div form input:nth-of-type(1) {
+  margin-top: 25px;
+  flex: 1;
+}
+.contact > div form input:nth-of-type(2) {
+  flex: 1;
+}
+.contact > div form input:nth-of-type(3) {
+  flex: 3;
+}
+.contact > div form input:nth-of-type(3):placeholder {
+  vertical-align: top;
+}
+.contact > div form input:nth-of-type(4) {
+  flex: 1;
+  background-color: #000;
+  color: #fff;
+}
+.contact > div div {
+  padding-top: 40px;
+  display: inline-flex;
+  flex-direction: column;
+  vertical-align: top;
+  width: 400px;
+  height: 100%;
+}
+.contact > div div > * {
+  margin-bottom: 50px;
+}
+.contact > div div img {
+  float: left;
+  margin-right: 10px;
+}
+footer {
+  height: 400px;
+  background-color: #000;
+  display: flex;
+  padding: 50px;
+  justify-content: space-between;
+  color: #fff;
 }

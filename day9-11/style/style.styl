@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300&display=swap');
+
 html
     box-sizing: border-box
 
 * 
+    font-family: 'Montserrat'
     box-sizing inherit
     margin 0 
     padding 0
@@ -54,7 +57,6 @@ header
                 height 40px
                 background-color #fff
                 color black
-                vertical-align: top
                 line-height 40px
                 font-size 12px
         
@@ -92,4 +94,229 @@ header
                     font-weight: bold
             img 
                 float left
+                width: 38px
                 margin-right 10px
+
+.sup 
+    height 550px
+    width 100%
+    background-image url(../pics/bg2.png)
+    background-size cover
+    position relative
+    &::before
+        content: ''
+        box-sizing border-box
+        display block
+        position absolute
+        width 100%
+        height 100%
+        background-color rgba(0, 0, 0, 0.8)
+    & > div:first-of-type
+        position relative
+        display: flex
+        flex-direction: column
+        padding 80px 0
+        width 800px
+        height 100%
+        margin 0 auto
+        p 
+            flex 1
+            width 38%
+            padding 10px
+            &:nth-child(1)
+                color white
+                font-size 32px
+            &:nth-child(2)
+                color rgb(165, 164, 143)
+                font-size 14px
+            &:nth-child(3)
+                width: 100%
+                span:nth-child(1)
+                    display: inline-block
+                    text-align: center
+                    width 180px
+                    height 40px
+                    background-color #fff
+                    color black
+                    line-height 40px
+                    font-size 12px
+                    margin-right: 20px
+                span:nth-child(2)
+                    display: inline-block
+                    text-align: center
+                    width 180px
+                    height 40px
+                    background-color rgba(0, 0, 0, 0.08)
+                    color rgb(185, 195, 187)
+                    line-height 40px
+                    font-size 12px
+                    border 1px solid rgb(100, 110, 102)
+    .ipad
+        position absolute
+        width 560px
+        height 450px
+        right 0 
+        top 0 
+        bottom 0
+        margin auto
+        border 1px solid rgb(100, 110, 102)
+        border-right-width: 0
+        border-top-left-radius: 30px
+        border-bottom-left-radius: 30px
+        img 
+            display block
+            position absolute
+            width 500px
+            height 400px
+            top 25px
+            right 0
+                
+.try 
+    width 100%
+    height: 450px
+    text-align: center
+    overflow hidden
+    h2 
+        margin 50px
+    & > div
+        width 800px
+        margin 0 auto
+        height calc(450px - 124px)
+        display: flex
+        justify-content space-between
+        div
+            flex 1
+            p
+                margin-top 25px
+
+hr 
+    border none 
+    height 1px
+    background-color rgb(235, 235, 235)
+
+.bird
+    height 550px
+    width 100%
+    & > div
+        width 800px
+        height 100%
+        margin 0 auto
+        padding 50px 0
+        display flex 
+        flex-wrap wrap
+        justify-content: space-between
+        align-content: space-between
+        img 
+            height 210px
+            width 450px
+        p 
+            width 300px
+            text-align left
+            font-size: 14px
+            span 
+                font-size 18px
+                font-weight: bold
+                display block
+                margin-bottom 25px
+
+.crew 
+    height 550px
+    width 100%
+    text-align center
+    h2 
+        margin 25px
+    & > p 
+        width 600px
+        margin 25px auto
+    & > div 
+        display flex
+        flex-wrap wrap
+        justify-content space-between
+        width 800px
+        margin 0 auto 
+        height calc(100% - 140px)
+        & > div 
+            width 42%
+            height 43%
+            position relative
+            background-size 100% 100%
+            &:nth-child(1)
+                background-image url(../pics/man1.png)
+                cursor pointer
+                div 
+                    position absolute
+                    opacity 0
+                    background-color rgba(0, 0, 0, 0.8)
+                    color white
+                    width 100%
+                    height 100%
+                    padding-top 10px
+                    transition .5s
+                    * 
+                        margin 10px 5px
+                &:hover div
+                    opacity 1
+                    transition .5s
+            &:nth-child(2)
+                background-image url(../pics/man2.png)
+            &:nth-child(3)
+                background-image url(../pics/man3.png)
+            &:nth-child(4)
+                background-image url(../pics/woman.png)
+                
+.contact 
+    height 600px
+    width 100%
+    & > div 
+        width 800px
+        display flex
+        justify-content: space-between
+        height 100%
+        margin 0 auto
+        padding 50px 0
+        form 
+            padding 25px
+            text-align: center
+            display inline-flex
+            flex-direction: column
+            height 100%
+            width 380px
+            border 2px solid rgb(244, 244, 244)
+            input 
+                width 100%
+                margin-bottom 20px
+                padding 10px
+                &:nth-of-type(1)
+                    margin-top 25px
+                    flex 1
+                &:nth-of-type(2)
+                    flex 1
+                &:nth-of-type(3)
+                    flex 3
+                    &:placeholder
+                        vertical-align: top
+                &:nth-of-type(4)
+                    flex 1
+                    background-color black
+                    color white
+                
+        div
+            padding-top 40px
+            display inline-flex
+            flex-direction: column
+            vertical-align: top
+            width: 400px
+            height 100% 
+            & > *
+                margin-bottom 50px 
+            img 
+                float left
+                margin-right 10px
+
+footer 
+    height 400px
+    background-color black
+    display flex
+    padding 50px
+    justify-content: space-between
+    color white
