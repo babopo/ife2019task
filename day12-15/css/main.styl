@@ -1,0 +1,165 @@
+* 
+    box-sizing: border-box
+    margin 0 
+    padding 0
+
+html
+body 
+    height 100%
+    font-size 0
+    display flex
+    width 100%
+
+section 
+    display inline-block
+
+
+.nav 
+    height 100%
+    width 100px
+    background-color #1d2531
+    position relative
+    img 
+        cursor pointer
+    .big 
+        position absolute
+        width 62px
+        height 62px
+        left 19px
+        &:nth-of-type(1)
+            top 19px
+        &:nth-of-type(2)
+            top 99px
+        &:nth-of-type(3)
+            top 179px
+        &:nth-of-type(4)
+            top 259px
+    .small 
+        width 18px
+        height 18px
+        position absolute
+        bottom: 20px
+        &:nth-of-type(5)
+            left 24px
+        &:nth-of-type(6)
+            left 55px
+    &::before 
+        content ''
+        position absolute
+        display: block
+        width: 2px
+        background-color #2399f1
+        height 3px
+        xtop 49px
+        left 0
+
+.inbox 
+    width 250px
+    height 100%
+    background-color #222c3c
+    padding 30px
+    position relative
+    font-size 14px
+    display flex
+    flex-direction: column
+    justify-content: space-between
+    ul 
+        list-style none
+        color white
+        &::before
+            content: url(../icons/settings.png)
+            position absolute
+            right 30px
+        &:nth-of-type(3)
+            li
+                &:nth-of-type(2)
+                    &::before 
+                        content ''
+                        position absolute
+                        display: block
+                        width: 2px
+                        background-color #2399f1
+                        height 3px
+                        top 8px
+                        left -30px
+                    &::after
+                        content url(../icons/21.png)
+                        position absolute
+                        right 0
+                &:nth-of-type(4)
+                    &::after
+                        content url(../icons/alert.png)
+                        position absolute
+                        right 0
+        &:nth-of-type(1)
+            li 
+                &:nth-of-type(3)
+                    &::after
+                        content url(../icons/54.png)
+                        position absolute
+                        right 0
+
+    li 
+        margin-bottom: 15px
+        position relative
+        &:first-child
+            opacity .5
+
+    hr 
+        border none 
+        height 1px 
+        background-color #2a3547
+        margin 10px 0 25px
+    div 
+        display flex 
+        &:nth-of-type(1)
+            flex-direction: column
+        &:nth-of-type(2)
+            flex-wrap wrap
+            justify-content: space-between
+            span 
+                color white   
+            img 
+                margin-top 10px    
+
+.content 
+    flex 1 
+    height 100%
+    header 
+        font-size 14px 
+        width 100%
+        height 80px
+        display flex
+        justify-content: space-between
+        padding 0 30px
+        position relative
+        border-bottom 1px solid #e6e9ec
+        & > span 
+            font-size 1.5em
+            line-height 80px
+        & > div 
+            line-height 80px
+            position relative
+            img 
+                vertical-align: middle
+                &:nth-of-type(2)
+                    position absolute
+                    left 29.3px
+                    bottom 21.6px
+            p  
+                line-height normal
+                display: inline-block
+                margin-left 15px
+                margin-right: 35px
+                position relative
+                top 12px
+    .left 
+        display inline-block
+        height calc(100% - 80px)
+        width 400px
+        background-color tan
+    main 
+        display inline-block
+        height calc(100% - 80px)
+        width calc(100% - 400px)
+        background-color lime
