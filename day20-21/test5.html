@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        div {
+            width: 480px;
+            height: 480px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="http://ife.baidu.com/2016/static/img/erik_ce204002.jpg" alt="">
+    </div>
+</body>
+<script>
+    let pos = 0
+    let flag = 1
+    //判断正放还是倒放
+    let div = document.querySelector('div')
+
+    setInterval(() => {
+        if(flag > 0) {
+            pos += 480
+        } else {
+            pos -= 480
+        }
+        div.scrollTop = pos
+        if(pos === 8160 || pos === 0) {
+            debugger;
+            flag = -flag
+        }
+    }, 50);
+
+</script>
+</html>
