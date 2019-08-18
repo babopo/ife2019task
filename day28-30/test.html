@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        input {
+            width: 200px;
+            height: 30px;
+        }
+        ul {
+            display: none;
+            width: 200px;
+            list-style: none;
+            text-align: center;
+            border-bottom: 1px solid;
+        }
+        li {
+            border: 1px solid;
+            border-bottom: none;
+            width: 100%;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        li:hover {
+            background-color: lime!important;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <input id="email-input" type="text">
+        <ul id="email-sug-wrapper" class="email-sug">
+            <li>@163.com</li>
+            <li>@gmail.com</li>
+            <li>@126.com</li>
+            <li>@qq.com</li>
+            <li>@263.net</li>
+        </ul>
+    </div>
+</body>
+<script>
+    // 邮箱后缀List参考
+    var postfixList = ['163.com', 'gmail.com', '126.com', 'qq.com', '263.net'];
+    let input = document.getElementById('email-input')
+    let ul = document.getElementById('email-sug-wrapper')
+    let lis = [].slice.call(ul.children)
+    //转换成数组方便之后操作
+    input.addEventListener('input', e => {
+        //输入部分
+        ul.style.display = 'block'
+        let prefix = input.value.trim()
+        //获得@之前和之后的内容
+        let prefixArr = prefix.split('@')
+        let beforeAt = prefixArr[0]
+        let afterAt = prefixArr[1]
+        let show = []
+        //记录显示出来的选项
+        for (let i = 0; i < lis.length; i++) {
+            //其实应该每个选项都创建一个节点加入，这样扩展性高
+            if(!afterAt || afterAt === postfixList[i].slice(0, afterAt.length)) {
+                lis[i].style.display = 'block'
+                //要还原成block
+                lis[i].innerHTML = beforeAt + '@' + postfixList[i] 
+                show.push(lis[i])
+            } else {
+                lis[i].style.display = 'none'
+            }
+        }
+        //加入键盘选项
+        let curr = 0
+        show[curr].style.backgroundColor = 'yellow'
+        //默认第一个选中
+        input.addEventListener('keydown', e => {
+            // debugger;
+            switch(e.key) {
+                case 'ArrowDown':
+                    show[curr].style.backgroundColor = 'white'
+                    curr++
+                    if(curr === show.length) {
+                        curr = 0
+                    }
+                    show[curr].style.backgroundColor = 'yellow'
+                    break
+                case 'ArrowUp':
+                    show[curr].style.backgroundColor = 'white'
+                    curr--
+                    if(curr === -1) {
+                        curr = show.length - 1
+                    }
+                    show[curr].style.backgroundColor = 'yellow'
+                    break
+                case 'Enter':
+                    //选中当前的值
+                    input.value = show[curr].innerHTML
+                    show[curr].style.backgroundColor = 'white'
+                    ul.style.display = 'none'
+                    //选中之后焦点再回到input
+                    input.focus()
+            }
+        })
+        if(prefix === '') {
+            ul.style.display = 'none'
+        }
+    })
+
+    ul.addEventListener('click', e => {
+        //点击部分
+        if(lis.includes(e.target)) {
+            input.value = e.target.innerHTML
+            ul.style.display = 'none'
+            //点击之后焦点再回到input
+            input.focus()
+        }
+    })
+
+</script>
+</html>
